@@ -555,7 +555,7 @@ input:focus, select:focus {
             <option value="HK1">CUỐI HỌC KÌ 1</option>
             <option value="GK2">GIỮA HỌC KÌ 2</option>
             <option value="HK2">CUỐI HỌC KÌ 2</option>
-            <option value="THI">THI TỐT NGHIỆP</option>
+            <option value="THI">THI THỬ TỐT NGHIỆP</option>
           </select>
         </div>
       </div>
@@ -669,6 +669,7 @@ const questionBanks = {
     P3: []
   },
   // ---------- LỚP 12 (HK2) ----------
+
   'T12HK2': {
 P1: [
   {
@@ -4037,6 +4038,10 @@ P3: [
   },
 
 
+
+
+
+
   // ---------- LỚP 12 (THI TỐT NGHIỆP) ----------
   'T12THI': {
     P1: [
@@ -4582,7 +4587,7 @@ function showResults(cheating = false) {
   const grade = document.getElementById('grade-select').value;
   const term = document.getElementById('term-select').value;
   const gradeNames = { '10':'TOÁN LỚP 10', '11':'TOÁN LỚP 11', '12':'TOÁN LỚP 12' };
-  const termNames = { 'GK1':'GIỮA HỌC KÌ 1','HK1':'CUỐI HỌC KÌ 1','GK2':'GIỮA HỌC KÌ 2','HK2':'CUỐI HỌC KÌ 2','THI':'THI TỐT NGHIỆP' };
+  const termNames = { 'GK1':'GIỮA HỌC KÌ 1','HK1':'CUỐI HỌC KÌ 1','GK2':'GIỮA HỌC KÌ 2','HK2':'CUỐI HỌC KÌ 2','THI':'THI THỬ TỐT NGHIỆP' };
   document.getElementById('result-title').textContent = `${gradeNames[grade]} - ${termNames[term]} - KẾT QUẢ`;
   const { totalScore, correctCountLegacy, incorrectCount, unansweredCount } = calculateScore();
   document.getElementById('result-student-name').textContent = studentName;
