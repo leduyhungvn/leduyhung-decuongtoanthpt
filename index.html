@@ -659,7 +659,15 @@ const questionBanks = {
       { id: 1, content: "Tập xác định của hàm số $y = \\dfrac{1}{x-2}$ là $\\mathbb{R} \\setminus \\{...\\}$", answerType: "int_pos", correct: 2 }
     ]
   },
-
+  // ---------- LỚP 11 ----------
+  'T11GK1': {
+    P1: [
+      { id:1, content:"$\\lim_{x\\to 2} (x^2+1)$ bằng:", correct:"$5$", wrong1:"$4$", wrong2:"$3$", wrong3:"$6$" },
+      { id:2, content:"Đạo hàm của $y = x^3$ là:", correct:"$3x^2$", wrong1:"$x^2$", wrong2:"$3x$", wrong3:"$x^3$" }
+    ],
+    P2: [],
+    P3: []
+  },
 
 
   'T10HK2': {
@@ -5474,18 +5482,7 @@ const questionBanks = {
 
 
 
-
-  // ---------- LỚP 11 ----------
-  'T11GK1': {
-    P1: [
-      { id:1, content:"$\\lim_{x\\to 2} (x^2+1)$ bằng:", correct:"$5$", wrong1:"$4$", wrong2:"$3$", wrong3:"$6$" },
-      { id:2, content:"Đạo hàm của $y = x^3$ là:", correct:"$3x^2$", wrong1:"$x^2$", wrong2:"$3x$", wrong3:"$x^3$" }
-    ],
-    P2: [],
-    P3: []
-  },
   // ---------- LỚP 12 (HK2) ----------
-
   'T12HK2': {
 P1: [
   {
@@ -9459,13 +9456,6 @@ P3: [
   },
 
 
-
-
-
-
-
-
-
   // ---------- LỚP 12 (THI TỐT NGHIỆP) ----------
   'T12THI': {
     P1: [
@@ -10033,7 +10023,7 @@ function showResults(cheating = false) {
     warningDiv.style.display = 'none';
   }
 
-  renderReviewQuestions(cheating);
+  renderReviewQuestions();  // Không cần truyền tham số cheating để lọc câu
   showScreen('result-screen');
 }
 
@@ -10041,12 +10031,13 @@ function formatTimeHMS(date) {
   return `${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}:${date.getSeconds().toString().padStart(2,'0')}`;
 }
 
-// ===== SỬA HÀM renderReviewQuestions: thêm originalId vào tiêu đề câu hỏi =====
-function renderReviewQuestions(cheating = false) {
+// ===== HÀM RENDER REVIEW: CHỈ HIỂN THỊ CÂU ĐÃ TƯƠNG TÁC =====
+function renderReviewQuestions() {
   const container = document.getElementById('review-list');
   container.innerHTML = '';
   currentQuestions.forEach(q => {
-    if (cheating && !isQuestionAnswered(q)) return;
+    // Chỉ hiển thị câu đã được tương tác (ít nhất một đáp án / mệnh đề / đã nhập số)
+    if (!isQuestionAnswered(q)) return;
 
     if (q.partType === 'P2') {
       const userSt = userAnswers[q.id] || {};
