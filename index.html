@@ -579,7 +579,7 @@ input:focus, select:focus {
       <div class="test-info">
         <div class="timer" id="timer">60:00</div>
         <div class="question-counter">
-          Câu <span id="current-question-number">1</span>/<span id="total-questions">24</span>
+          Câu <span id="current-question-number">1</span>/<span id="total-questions">22</span>
         </div>
       </div>
     </div>
@@ -620,12 +620,12 @@ input:focus, select:focus {
         <div class="grid-item wrong">
           <svg class="grid-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
           <div class="grid-label">Sai</div>
-          <div class="grid-value" id="incorrect-count">0/24</div>
+          <div class="grid-value" id="incorrect-count">0/22</div>
         </div>
         <div class="grid-item unanswered">
           <svg class="grid-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="8"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
           <div class="grid-label">Chưa chọn</div>
-          <div class="grid-value" id="unanswered-count">0/24</div>
+          <div class="grid-value" id="unanswered-count">0/22</div>
         </div>
       </div>
     </div>
@@ -640,9 +640,8 @@ input:focus, select:focus {
 <div id="notification" class="notification"></div>
 
 <script>
-// ======================= KHO ĐỀ MẪU ĐẦY ĐỦ (LỚP 10, 11, 12) =======================
+// ======================= KHO ĐỀ MẪU (GIỮ NGUYÊN) =======================
 const questionBanks = {
-  // ---------- LỚP 10 ----------
   'T10GK1': {
     P1: [
       { id: 1, content: "Tập xác định của hàm số $y = \\sqrt{x-2}$ là:", correct: "$[2;+\\infty)$", wrong1: "$(-\\infty;2]$", wrong2: "$\\mathbb{R}$", wrong3: "$(2;+\\infty)$" },
@@ -659,7 +658,6 @@ const questionBanks = {
       { id: 1, content: "Tập xác định của hàm số $y = \\dfrac{1}{x-2}$ là $\\mathbb{R} \\setminus \\{...\\}$", answerType: "int_pos", correct: 2 }
     ]
   },
-  // ---------- LỚP 11 ----------
   'T11GK1': {
     P1: [
       { id:1, content:"$\\lim_{x\\to 2} (x^2+1)$ bằng:", correct:"$5$", wrong1:"$4$", wrong2:"$3$", wrong3:"$6$" },
@@ -668,6 +666,7 @@ const questionBanks = {
     P2: [],
     P3: []
   },
+
 
 
   'T10HK2': {
@@ -5482,10 +5481,9 @@ const questionBanks = {
 
 
 
-  // ---------- LỚP 12 (HK2) ----------
   'T12HK2': {
-P1: [
-  {
+    P1: [
+{
     "id": 1,
     "content": "Trong không gian với hệ tọa độ $Oxyz$, gọi $\\alpha$ là góc giữa hai mặt phẳng $(P): x + 2y - z + 2 = 0$ và $(Q): 2x - y - z + 4 = 0$. Tính $\\cos \\alpha$.",
     "correct": "$\\frac{1}{6}$",
@@ -5559,12 +5557,12 @@ P1: [
   },
   {
     "id": 10,
-    "content": "Cho hàm số $y = f(x)$ liên tục trên $[1; 9]$, thỏa mãn $\\int_4^5 f(x) dx = 24$ và $\\int_1^9 f(x) dx = 7$. Tính giá trị biểu thức $I = \\int_4^5 f(x) dx + \\int_5^9 f(x) dx$.",
-    "correct": "$17$",
-    "wrong1": "$168$",
-    "wrong2": "$-17$",
-    "wrong3": "$31$"
-  },
+    "content": "Cho hàm số $y = f(x)$ liên tục trên $[1; 9]$, thỏa mãn $\\int_1^4 f(x) dx = 7$ và $\\int_1^9 f(x) dx = 24$. Tính giá trị biểu thức $I = \\int_4^5 f(x) dx + \\int_5^9 f(x) dx$.",
+    "correct": "17",
+    "wrong1": "168",
+    "wrong2": "-17",
+    "wrong3": "31"
+},
   {
     "id": 11,
     "content": "Giả sử tỉ lệ người dân của tỉnh X nghiện thuốc lá là 20%; tỉ lệ người bị bệnh phổi trong số người nghiện thuốc lá là 70%, trong số người không nghiện thuốc lá là 15%. Hỏi khi ta gặp ngẫu nhiên một người dân của tỉnh X thì khả năng mà đó bị bệnh phổi là bao nhiêu %?",
@@ -5645,7 +5643,7 @@ P1: [
     "wrong2": "$0,3$",
     "wrong3": "$0,18$"
   },
-  {
+{
     "id": 21,
     "content": "Cho hai biến cố A và B có $P(A) = 0,3; P(B) = 0,6; P(A \\cap B) = 0,2$. Xác suất $P(A|B)$ là",
     "correct": "$\\frac{1}{3}$",
@@ -5661,14 +5659,14 @@ P1: [
     "wrong2": "$P(-3; -2; -5)$",
     "wrong3": "$N(1; -2; 1)$"
   },
-  {
+{
     "id": 23,
     "content": "Trong không gian với hệ tọa độ $Oxyz$, cho hai đường thẳng \\[d_1: \\begin{cases} x = 2 - 2t \\\\ y = 4t \\\\ z = -3 + 6t \\end{cases}\\] và \\[d_2: \\begin{cases} x = 1 - t \\\\ y = 2 + 2t \\\\ z = 3 - 3t \\end{cases}\\] Khẳng định nào sau đây đúng?",
-    "correct": "$d_1 \\parallel d_2$",
-    "wrong1": "$d_1$ và $d_2$ chéo nhau",
+    "correct": "$d_1$ và $d_2$ cắt nhau",
+    "wrong1": "$d_1 \\parallel d_2$",
     "wrong2": "$d_1 \\equiv d_2$",
-    "wrong3": "$d_1 \\perp d_2$"
-  },
+    "wrong3": "$d_1$ và $d_2$ chéo nhau"
+},
   {
     "id": 24,
     "content": "Trong không gian với hệ tọa độ $Oxyz$, phương trình nào dưới đây là phương trình mặt phẳng đi qua điểm $M(1; 2; -3)$ và có một vectơ pháp tuyến $\\vec{n} = (1; -2; 3)$?",
@@ -5805,7 +5803,7 @@ P1: [
     "wrong2": "$18$",
     "wrong3": "$6$"
   },
-  {
+{
     "id": 41,
     "content": "Trong không gian $Oxyz$, cho đường thẳng $d: \\frac{x-1}{-1} = \\frac{y+3}{2} = \\frac{z-3}{1}$ và mặt phẳng $(P): 2x + y - 2z + 9 = 0$. Tìm toạ độ giao điểm của $d$ và $(P)$.",
     "correct": "$(0; -1; 4)$",
@@ -6110,13 +6108,13 @@ P1: [
     "wrong3": "$\\Delta: \\frac{x - 2}{-1} = \\frac{y}{1} = \\frac{z - 1}{-2}$"
   },
   {
-    "id": 79,
-    "content": "Trong không gian Oxyz, tính góc giữa hai đường thẳng $d_1: \\frac{x}{1} = \\frac{y + 1}{-1} = \\frac{z - 1}{1}$ và $d_2: \\frac{x + 1}{1} = \\frac{y}{1} = \\frac{z - 3}{1}$.",
-    "correct": "$90^\\circ$",
-    "wrong1": "$60^\\circ$",
-    "wrong2": "$30^\\circ$",
-    "wrong3": "$45^\\circ$"
-  },
+  "id": 79,
+  "content": "Trong không gian Oxyz, tính góc giữa hai đường thẳng d1: x/1 = (y+1)/-1 = (z-1)/1 và d2: (x+1)/1 = y/1 = (z-3)/1 (làm tròn đến độ).",
+  "correct": "71°",
+  "wrong1": "90°",
+  "wrong2": "60°",
+  "wrong3": "45°"
+},
   {
     "id": 80,
     "content": "Trong không gian $Oxyz$, cho mặt phẳng $(P) : x - 2y - 3z - 2 = 0$. Đường thẳng $d$ vuông góc với mặt phẳng $(P)$ có một véc-tơ chỉ phương là",
@@ -6125,7 +6123,7 @@ P1: [
     "wrong2": "$\\vec{u}_3 = (1; -3; -2)$",
     "wrong3": "$\\vec{u}_4 = (1; 2; 3)$"
   },
-  {
+{
     "id": 81,
     "content": "Trong không gian $Oxyz$, cho hai điểm $M(3; -2; 5)$, $N(-1; 6; -3)$. Mặt cầu đường kính $MN$ có phương trình là",
     "correct": "$(x - 1)^2 + (y - 2)^2 + (z - 1)^2 = 36$",
@@ -6285,7 +6283,7 @@ P1: [
     "wrong2": "$(-3; 1; -2)$",
     "wrong3": "$(3; -1; -2)$"
   },
-  {
+{
     "id": 101,
     "content": "Trong không gian $Oxyz$, cho hai điểm $A(1; 2; 3)$ và $B(3; 4; 5)$. Tọa độ trung điểm $I$ của đoạn $AB$ là",
     "correct": "$(2; 3; 4)$",
@@ -6414,13 +6412,13 @@ P1: [
     "wrong3": "$-\\cot x + C$"
   },
   {
-    "id": 117,
-    "content": "Trong không gian $Oxyz$, cho điểm $M(1; 2; 3)$ và mặt phẳng $(P): x - 2y + z - 4 = 0$. Khoảng cách từ $M$ đến $(P)$ bằng",
-    "correct": "$\\frac{\\sqrt{6}}{3}$",
-    "wrong1": "$\\frac{2}{\\sqrt{6}}$",
-    "wrong2": "$\\frac{4}{\\sqrt{6}}$",
-    "wrong3": "$\\frac{1}{\\sqrt{6}}$"
-  },
+  "id": 117,
+  "content": "Trong không gian $Oxyz$, cho điểm $M(1; 2; 3)$ và mặt phẳng $(P): x - 2y + z - 4 = 0$. Khoảng cách từ $M$ đến $(P)$ bằng",
+  "correct": "$\\frac{4}{\\sqrt{6}}$",
+  "wrong1": "$\\frac{2}{\\sqrt{6}}$",
+  "wrong2": "$\\frac{6}{\\sqrt{6}}$",
+  "wrong3": "$\\frac{1}{\\sqrt{6}}$"
+},
   {
     "id": 118,
     "content": "Cho $\\int_0^1 (3x^2 + 2x) dx = a$. Giá trị của $a$ là",
@@ -6493,14 +6491,14 @@ P1: [
     "wrong2": "$3x^3 - \\ln x + C$",
     "wrong3": "$x^3 - \\frac{1}{x^2} + C$"
   },
-  {
-    "id": 127,
-    "content": "Trong không gian $Oxyz$, cho điểm $A(1; 2; -1)$ và mặt phẳng $(P): 2x - y + z + 3 = 0$. Khoảng cách từ $A$ đến $(P)$ bằng",
-    "correct": "$\\frac{4}{\\sqrt{6}}$",
-    "wrong1": "$\\frac{2}{\\sqrt{6}}$",
-    "wrong2": "$\\frac{6}{\\sqrt{6}}$",
-    "wrong3": "$\\frac{1}{\\sqrt{6}}$"
-  },
+{
+  "id": 127,
+  "content": "Trong không gian $Oxyz$, cho điểm $A(1; 2; -1)$ và mặt phẳng $(P): 2x - y + z + 3 = 0$. Khoảng cách từ $A$ đến $(P)$ bằng",
+  "correct": "$\\frac{2}{\\sqrt{6}}$",
+  "wrong1": "$\\frac{4}{\\sqrt{6}}$",
+  "wrong2": "$\\frac{6}{\\sqrt{6}}$",
+  "wrong3": "$\\frac{1}{\\sqrt{6}}$"
+},
   {
     "id": 128,
     "content": "Cho $A$ và $B$ là hai biến cố độc lập với $P(A) = 0,2$, $P(B) = 0,5$. Khi đó $P(A \\cup B)$ bằng",
@@ -6590,13 +6588,13 @@ P1: [
     "wrong3": "$-2$"
   },
   {
-    "id": 139,
-    "content": "Trong không gian $Oxyz$, phương trình mặt phẳng đi qua điểm $A(1; -2; 3)$ và song song với mặt phẳng $(P): 2x - y + 3z - 4 = 0$ là",
-    "correct": "$2x - y + 3z - 11 = 0$",
-    "wrong1": "$2x - y + 3z + 11 = 0$",
-    "wrong2": "$2x - y + 3z - 13 = 0$",
-    "wrong3": "$2x - y + 3z + 13 = 0$"
-  },
+  "id": 139,
+  "content": "Trong không gian $Oxyz$, phương trình mặt phẳng đi qua điểm $A(1; -2; 3)$ và song song với mặt phẳng $(P): 2x - y + 3z - 4 = 0$ là",
+  "correct": "$2x - y + 3z - 13 = 0$",
+  "wrong1": "$2x - y + 3z + 11 = 0$",
+  "wrong2": "$2x - y + 3z - 11 = 0$",
+  "wrong3": "$2x - y + 3z + 13 = 0$"
+},
   {
     "id": 140,
     "content": "Cho hai biến cố $A$ và $B$ với $P(A) = 0,5$, $P(B) = 0,4$, $P(A \\cup B) = 0,7$. Khi đó $P(A \\cap B)$ bằng",
@@ -6685,7 +6683,7 @@ P1: [
     "wrong2": "$(1; 2; 0)$",
     "wrong3": "$(0; 2; 3)$"
   },
-  {
+{
     "id": 151,
     "content": "Cho $\\int_0^1 \\frac{1}{\\sqrt{1-x^2}} dx = \\frac{\\pi}{2}$. Khi đó $\\int_0^1 \\frac{x}{\\sqrt{1-x^2}} dx$ bằng",
     "correct": "$1$",
@@ -6758,13 +6756,13 @@ P1: [
     "wrong3": "$\\frac{1}{2}(\\ln x)^2 + C$"
   },
   {
-    "id": 160,
-    "content": "Trong không gian $Oxyz$, cho điểm $A(2; -1; 3)$ và đường thẳng $d: \\frac{x-1}{2} = \\frac{y+2}{-1} = \\frac{z}{3}$. Khoảng cách từ $A$ đến $d$ bằng",
-    "correct": "$\\frac{\\sqrt{14}}{2}$",
-    "wrong1": "$\\sqrt{14}$",
-    "wrong2": "$\\frac{\\sqrt{7}}{2}$",
-    "wrong3": "$\\sqrt{7}$"
-  },
+  "id": 160,
+  "content": "Trong không gian $Oxyz$, cho điểm $A(2; -1; 3)$ và đường thẳng $d: \\frac{x-1}{2} = \\frac{y+2}{-1} = \\frac{z}{3}$. Khoảng cách từ $A$ đến $d$ bằng",
+  "correct": "$\\frac{3\\sqrt{21}}{7}$",
+  "wrong1": "$\\frac{\\sqrt{14}}{2}$",
+  "wrong2": "$\\sqrt{14}$",
+  "wrong3": "$\\frac{\\sqrt{7}}{2}$"
+},
 {
     "id": 161,
     "content": "Biết $\\int_1^2 \\frac{1}{x} dx = \\ln 2$. Giá trị của $\\int_1^2 \\frac{\\ln x}{x^2} dx$ bằng",
@@ -6854,13 +6852,13 @@ P1: [
     "wrong3": "$\\frac{1}{2}\\ln(x^2 + 1) + C$"
   },
   {
-    "id": 172,
-    "content": "Trong không gian $Oxyz$, cho điểm $A(1; 2; -3)$ và mặt phẳng $(P): x - 2y + 2z - 5 = 0$. Khoảng cách từ $A$ đến $(P)$ bằng",
-    "correct": "$4$",
-    "wrong1": "$2$",
-    "wrong2": "$\\frac{4}{3}$",
-    "wrong3": "$\\frac{2}{3}$"
-  },
+  "id": 172,
+  "content": "Trong không gian $Oxyz$, cho điểm $A(1; 2; -3)$ và mặt phẳng $(P): x - 2y + 2z - 5 = 0$. Khoảng cách từ $A$ đến $(P)$ bằng",
+  "correct": "$\\frac{14}{3}$",
+  "wrong1": "$2$",
+  "wrong2": "$\\frac{4}{3}$",
+  "wrong3": "$\\frac{2}{3}$"
+},
   {
     "id": 173,
     "content": "Thể tích khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi $y = \\ln x$, $y = 0$, $x = 1$, $x = e$ quanh trục $Ox$ là",
@@ -6910,13 +6908,13 @@ P1: [
     "wrong3": "$\\frac{5}{8}$"
   },
   {
-    "id": 179,
-    "content": "Trong không gian $Oxyz$, cho đường thẳng $d: \\frac{x-1}{2} = \\frac{y+1}{-1} = \\frac{z}{3}$ và mặt phẳng $(P): x + y + z - 5 = 0$. Góc giữa $d$ và $(P)$ bằng",
-    "correct": "$90^\\circ$",
-    "wrong1": "$0^\\circ$",
-    "wrong2": "$30^\\circ$",
-    "wrong3": "$60^\\circ$"
-  },
+  "id": 179,
+  "content": "Trong không gian $Oxyz$, cho đường thẳng $d: \\frac{x-1}{2} = \\frac{y+1}{-1} = \\frac{z}{3}$ và mặt phẳng $(P): x + y + z - 5 = 0$. Góc giữa $d$ và $(P)$ bằng",
+  "correct": "$\\arcsin\\left(\\frac{4}{\\sqrt{42}}\\right)$",
+  "wrong1": "$0^\\circ$",
+  "wrong2": "$30^\\circ$",
+  "wrong3": "$60^\\circ$"
+},
   {
     "id": 180,
     "content": "Cho hai biến cố $A$ và $B$ với $P(A) = 0,6$, $P(B) = 0,5$, $P(A \\cup B) = 0,8$. Khi đó $P(A|B)$ bằng",
@@ -6925,7 +6923,7 @@ P1: [
     "wrong2": "$0,4$",
     "wrong3": "$0,3$"
   },
-  {
+{
     "id": 181,
     "content": "Họ nguyên hàm của hàm số $f(x) = 2^x$ là",
     "correct": "$\\frac{2^x}{\\ln 2} + C$",
@@ -6973,7 +6971,7 @@ P1: [
     "wrong2": "$\\arctan x + C$",
     "wrong3": "$-\\arcsin x + C$"
   },
-  {
+{
     "id": 187,
     "content": "Trong không gian $Oxyz$, cho điểm $M(1; 2; 3)$ và mặt phẳng $(P): x - 2y + 2z - 5 = 0$. Hình chiếu vuông góc của $M$ lên $(P)$ có tọa độ là",
     "correct": "$\\left(\\frac{11}{9}; \\frac{14}{9}; \\frac{31}{9}\\right)$",
@@ -7014,13 +7012,13 @@ P1: [
     "wrong3": "$-\\cot x - x + C$"
   },
   {
-    "id": 192,
-    "content": "Trong không gian $Oxyz$, cho đường thẳng $d: \\frac{x-1}{2} = \\frac{y}{-1} = \\frac{z+2}{3}$. Mặt phẳng nào sau đây chứa $d$?",
-    "correct": "$x + y - z - 3 = 0$",
-    "wrong1": "$2x - y + 3z + 5 = 0$",
-    "wrong2": "$x - y + 2z + 3 = 0$",
-    "wrong3": "$x + 2y - z - 5 = 0$"
-  },
+  "id": 192,
+  "content": "Trong không gian $Oxyz$, cho đường thẳng $d: \\frac{x-1}{2} = \\frac{y}{-1} = \\frac{z+2}{3}$. Mặt phẳng nào sau đây chứa $d$?",
+  "correct": "$x + 2y - 1 = 0$",
+  "wrong1": "$2x - y + 3z + 5 = 0$",
+  "wrong2": "$x - y + 2z + 3 = 0$",
+  "wrong3": "$x + 2y - z - 5 = 0$"
+},
   {
     "id": 193,
     "content": "Tính $\\int_0^{\\pi} \\sin^2 x dx$.",
@@ -7085,9 +7083,9 @@ P1: [
     "wrong2": "$1$",
     "wrong3": "$\\frac{2}{3}$"
   }
-],
-P2: [
-  {
+    ],
+    P2: [
+        {
   "id": 1,
   "content": "Trong không gian $Oxyz$ (đơn vị trên mỗi trục tính theo kilômét), một trạm thu phát sóng điện thoại di động được đặt ở vị trí $I(1;3;7)$. Trạm thu phát sóng đó được thiết kế với bán kính phủ sóng là $3 \\, km$.",
   "statements": [
@@ -7538,7 +7536,7 @@ P2: [
       { "text": "Điểm $M(1; -2; 3)$ nằm trên mặt cầu.", "correct": false },
       { "text": "Mặt cầu tiếp xúc với mặt phẳng $Oxy$.", "correct": false },
       { "text": "Khoảng cách từ tâm đến mặt phẳng $(P): 2x - y + 2z - 1 = 0$ bằng $8$.", "correct": false },
-      { "text": "Phương trình mặt phẳng tiếp xúc với mặt cầu tại điểm $A(2; -2; 3)$ là $x - 2 = 0$.", "correct": false },
+      { "text": "Phương trình mặt phẳng tiếp xúc với mặt cầu tại điểm $A(2; -2; 3)$ là $x - 2 = 0$.", "correct": true },
       { "text": "Mặt cầu cắt trục $Ox$ tại hai điểm phân biệt.", "correct": true },
       { "text": "Điểm $N(0; 0; 1)$ nằm trong mặt cầu.", "correct": true },
       { "text": "Bán kính đường tròn giao tuyến của mặt cầu với mặt phẳng $(P): x + y + z = 0$ bằng $2$.", "correct": false },
@@ -8213,26 +8211,26 @@ P2: [
     { "text": "Mặt phẳng $(Q): 2x+2y-z+1=0$ tiếp xúc với mặt cầu.", "correct": false },
     { "text": "Bán kính đường tròn giao tuyến của $(S)$ với mặt phẳng $Oxy$ bằng $\\sqrt{8}$.", "correct": true },
     { "text": "Mặt cầu đi qua gốc tọa độ.", "correct": false },
-    { "text": "Khoảng cách từ $I$ đến $(P)$ bằng $1$.", "correct": true },
-    { "text": "Mặt phẳng $(P)$ cắt mặt cầu theo một đường tròn có bán kính $\\sqrt{8}$.", "correct": true },
-    { "text": "Phương trình mặt phẳng tiếp xúc với $(S)$ và song song với $(P)$ là $2x+2y-z+7=0$ và $2x+2y-z-5=0$.", "correct": true },
+    { "text": "Khoảng cách từ $I$ đến $(P)$ bằng $1$.", "correct": false },
+    { "text": "Mặt phẳng $(P)$ cắt mặt cầu theo một đường tròn có bán kính $\\sqrt{8}$.", "correct": false },
+    { "text": "Phương trình mặt phẳng tiếp xúc với $(S)$ và song song với $(P)$ là $2x+2y-z+7=0$ và $2x+2y-z-5=0$.", "correct": false },
     { "text": "Điểm $N(-1;2;4)$ nằm trên mặt cầu.", "correct": true },
     { "text": "Mặt cầu cắt trục $Oz$ tại hai điểm phân biệt.", "correct": true },
     { "text": "Khoảng cách từ $I$ đến mặt phẳng $Oxy$ bằng $1$.", "correct": true },
-    { "text": "Mặt phẳng $2x+2y-z-5=0$ tiếp xúc với mặt cầu.", "correct": true },
+    { "text": "Mặt phẳng $2x+2y-z-5=0$ tiếp xúc với mặt cầu.", "correct": false },
     { "text": "Mặt cầu $(S)$ có phương trình $x^2+y^2+z^2+2x-4y-2z-3=0$.", "correct": true },
     { "text": "Giao điểm của $(S)$ với trục $Ox$ là $(-1 \\pm \\sqrt{5}; 0; 0)$.", "correct": false },
     { "text": "Điểm $A(0;0;0)$ nằm trong mặt cầu.", "correct": true },
     { "text": "Mặt cầu (S) có tâm nằm trên mặt phẳng (P).", "correct": false },
     { "text": "Mặt phẳng (P) đi qua tâm I.", "correct": false },
-    { "text": "Mặt cầu (S) và mặt phẳng (P) cắt nhau theo đường tròn có chu vi 2π√8.", "correct": true },
+    { "text": "Mặt cầu (S) và mặt phẳng (P) cắt nhau theo đường tròn có chu vi 2π√8.", "correct": false },
     { "text": "Đường thẳng d: {x = -1 + 2t, y = 2 + 2t, z = 1 - t} cắt mặt cầu tại hai điểm phân biệt.", "correct": true },
     { "text": "Mặt phẳng (R): 2x + 2y - z + 9 = 0 tiếp xúc với (S).", "correct": false },
     { "text": "Mặt phẳng Oxy cắt (S) theo một đường tròn có tâm H(-1;2;0).", "correct": true },
     { "text": "Mặt phẳng Oyz cắt (S) theo một đường tròn có bán kính √8.", "correct": true },
     { "text": "Mặt phẳng (P) song song với mặt phẳng 2x + 2y - z = 0.", "correct": true },
     { "text": "Bán kính mặt cầu (S) bằng 3.", "correct": true },
-    { "text": "Mặt phẳng (P) cắt mặt cầu theo một đường tròn có diện tích 8π.", "correct": true }
+    { "text": "Mặt phẳng (P) cắt mặt cầu theo một đường tròn có diện tích 8π.", "correct": false }
   ]
 },
 {
@@ -8252,7 +8250,7 @@ P2: [
     { "text": "$\\int_0^1 e^{2x} \\, dx = \\frac{1}{2}(e^2 - 4)$.", "correct": false },
     { "text": "$\\int_0^1 e^{2x} \\, dx = \\int_0^1 (e^x)^2 \\, dx$.", "correct": true },
     { "text": "$\\int_0^1 e^{2x} \\, dx = \\left[ \\frac{e^{2x}}{2} \\right]_0^1$.", "correct": true },
-    { "text": "$\\int_0^1 e^{2x} \\, dx = \\frac{1}{2} \\int_0^1 e^u \\, du$ với $u = 2x$.", "correct": true },
+    { "text": "$\\int_0^1 e^{2x} \\, dx = \\frac{1}{2} \\int_0^1 e^u \\, du$ với $u = 2x$.", "correct": false },
     { "text": "$\\int_0^1 e^{2x} \\, dx = \\frac{e^2 - 1}{2} \\approx 3.1945$.", "correct": true },
     { "text": "$\\int_0^1 e^{2x} \\, dx = \\int_0^1 (e^{2x} - 1) \\, dx + \\int_0^1 1 \\, dx$.", "correct": true },
     { "text": "$\\int_0^1 e^{2x} \\, dx = \\frac{1}{2} \\int_0^2 e^t \\, dt$.", "correct": true },
@@ -8279,22 +8277,22 @@ P2: [
     { "text": "Điểm $B(5; -3; 1)$ thuộc $d$.", "correct": true },
     { "text": "Khoảng cách từ $A$ đến $d$ bằng $\\frac{3\\sqrt{21}}{7}$.", "correct": false },
     { "text": "Phương trình mặt phẳng qua $A$ và vuông góc với $d$ là $3x - 2y + z - 2 = 0$.", "correct": true },
-    { "text": "Hình chiếu của $A$ lên $d$ là $H(2; -1; 0)$.", "correct": true },
-    { "text": "Điểm đối xứng của $A$ qua $d$ là $A'(3; -4; -3)$.", "correct": true },
-    { "text": "$d$ vuông góc với đường thẳng $\\Delta: \\frac{x}{-3} = \\frac{y}{2} = \\frac{z}{-1}$.", "correct": true },
+    { "text": "Hình chiếu của $A$ lên $d$ là $H(2; -1; 0)$.", "correct": false },
+    { "text": "Điểm đối xứng của $A$ qua $d$ là $A'(3; -4; -3)$.", "correct": false },
+    { "text": "$d$ vuông góc với đường thẳng $\\Delta: \\frac{x}{-3} = \\frac{y}{2} = \\frac{z}{-1}$.", "correct": false },
     { "text": "$d$ song song với mặt phẳng $(P): 3x - 2y + z = 0$.", "correct": false },
     { "text": "$d$ cắt trục $Oy$ tại điểm có tung độ bằng $-1$.", "correct": false },
     { "text": "Góc giữa $d$ và trục $Oz$ bằng $\\arccos\\frac{1}{\\sqrt{14}}$.", "correct": true },
     { "text": "Đường thẳng $d$ có phương trình tham số $\\begin{cases} x = 2 + 3t \\\\ y = -1 - 2t \\\\ z = t \\end{cases}$.", "correct": true },
     { "text": "Khoảng cách từ $A$ đến $d$ bằng $\\frac{\\sqrt{106}}{7}$.", "correct": false },
-    { "text": "Hình chiếu của $A$ lên $d$ là $H(2;-1;0)$.", "correct": true },
-    { "text": "Điểm đối xứng của $A$ qua $d$ là $A'(3; -4; -3)$.", "correct": true },
+    { "text": "Hình chiếu của $A$ lên $d$ là $H(2;-1;0)$.", "correct": false },
+    { "text": "Điểm đối xứng của $A$ qua $d$ là $A'(3; -4; -3)$.", "correct": false },
     { "text": "Góc giữa $d$ và trục $Ox$ bằng $\\arccos\\frac{3}{\\sqrt{14}}$.", "correct": true },
     { "text": "Mặt phẳng $(Q)$ qua $A$ và vuông góc $d$ có phương trình $3x - 2y + z - 2 = 0$.", "correct": true },
     { "text": "Đường thẳng $d$ cắt mặt phẳng $Oxy$ tại điểm $(\\frac{5}{3}; -\\frac{1}{3}; 0)$.", "correct": false },
     { "text": "Đường thẳng $d$ cắt mặt phẳng $Oyz$ tại điểm $(0; -\\frac{7}{3}; \\frac{2}{3})$?", "correct": false },
     { "text": "Điểm $C(2;-1;0)$ thuộc $d$ và $\\overrightarrow{AC} = (1;-3;-3)$.", "correct": true },
-    { "text": "Khoảng cách từ $A$ đến $d$ bằng $\\frac{\\sqrt{285}}{7}$.", "correct": true },
+    { "text": "Khoảng cách từ $A$ đến $d$ bằng $\\frac{\\sqrt{285}}{7}$.", "correct": false },
     { "text": "Đường thẳng d đi qua điểm M(2; -1; 2).", "correct": false },
     { "text": "Vectơ chỉ phương của d là u = (3; -2; 3).", "correct": false },
     { "text": "Điểm A(1;2;3) không thuộc d.", "correct": true },
@@ -8487,9 +8485,9 @@ P2: [
       { "text": "Phương trình tiếp tuyến tại điểm x = 0 là y = -1/4 x - 1/2.", "correct": false }
     ]
   }
-],
-P3: [
-  {
+    ],
+    P3: [
+{
     "id": 1,
     "content": "Trong không gian $Oxyz$, cho mặt phẳng $(P): x - 2y + 2z - 5 = 0$. Điểm $M(5, 1, c)$ nằm trên mặt phẳng $(P)$. Tìm $c$.",
     "answerType": "int_pos",
@@ -9452,11 +9450,8 @@ P3: [
     "answerType": "int_neg",
     "correct": -2
   }
-]
+    ]
   },
-
-
-  // ---------- LỚP 12 (THI TỐT NGHIỆP) ----------
   'T12THI': {
     P1: [
       { id: 1, content: "Trong không gian với hệ tọa độ $Oxyz$, gọi $\\alpha$ là góc giữa hai mặt phẳng $(P): x + 2y - z + 2 = 0$ và $(Q): 2x - y - z + 4 = 0$. Tính $\\cos \\alpha$.", correct: "$\\frac{1}{6}$", wrong1: "$\\frac{3}{4}$", wrong2: "$\\frac{1}{3}$", wrong3: "$-\\frac{1}{3}$" },
@@ -9511,7 +9506,7 @@ let userAnswers = {};
 let testStartTime = null;
 let testSubmitTime = null;
 let timerInterval = null;
-let timeLeft = 3600; // 60 phút = 3600 giây
+let timeLeft = 3600; // 60 phút
 let currentTestCode = '';
 let currentQuestions = [];
 let studentName = '';
@@ -9597,19 +9592,22 @@ function getRandomQuestions(code) {
   const bank = questionBanks[code];
   if (!bank) return [];
   const finalQuestions = [];
+  // Phần 1: lấy tối đa 12 câu
   if (bank.P1 && bank.P1.length) {
     const shuffledP1 = shuffleArray([...bank.P1]);
-    const selectedP1 = shuffledP1.slice(0, 16);
+    const selectedP1 = shuffledP1.slice(0, 12);
     finalQuestions.push(...selectedP1.map(q => convertToDisplayFormat(q, 'P1')));
   }
+  // Phần 2: lấy tối đa 4 câu
   if (bank.P2 && bank.P2.length) {
     const shuffledP2 = shuffleArray([...bank.P2]);
     const selectedP2 = shuffledP2.slice(0, 4);
     finalQuestions.push(...selectedP2.map(q => convertToDisplayFormat(q, 'P2')));
   }
+  // Phần 3: lấy tối đa 6 câu
   if (bank.P3 && bank.P3.length) {
     const shuffledP3 = shuffleArray([...bank.P3]);
-    const selectedP3 = shuffledP3.slice(0, 4);
+    const selectedP3 = shuffledP3.slice(0, 6);
     finalQuestions.push(...selectedP3.map(q => convertToDisplayFormat(q, 'P3')));
   }
   finalQuestions.forEach((q, idx) => q.displayOrder = idx + 1);
@@ -9914,7 +9912,7 @@ function calculateScore() {
     if (q.partType === 'P1') {
       const ans = userAnswers[q.id];
       if (ans && ans === q.correctAnswer) {
-        totalScore += 2.5;
+        totalScore += 2.5;   // mỗi câu 2,5%
         correctCountLegacy++;
       } else if (ans) {
         incorrectCount++;
@@ -9967,7 +9965,7 @@ function calculateScore() {
           }
         }
         if (isCorrect) {
-          totalScore += 5;
+          totalScore += 5;   // mỗi câu 5%
           correctCountLegacy++;
         } else {
           incorrectCount++;
@@ -10023,7 +10021,7 @@ function showResults(cheating = false) {
     warningDiv.style.display = 'none';
   }
 
-  renderReviewQuestions();  // Không cần truyền tham số cheating để lọc câu
+  renderReviewQuestions();
   showScreen('result-screen');
 }
 
@@ -10031,12 +10029,10 @@ function formatTimeHMS(date) {
   return `${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}:${date.getSeconds().toString().padStart(2,'0')}`;
 }
 
-// ===== HÀM RENDER REVIEW: CHỈ HIỂN THỊ CÂU ĐÃ TƯƠNG TÁC =====
 function renderReviewQuestions() {
   const container = document.getElementById('review-list');
   container.innerHTML = '';
   currentQuestions.forEach(q => {
-    // Chỉ hiển thị câu đã được tương tác (ít nhất một đáp án / mệnh đề / đã nhập số)
     if (!isQuestionAnswered(q)) return;
 
     if (q.partType === 'P2') {
